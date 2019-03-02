@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List Singer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>List Singer</h2>
+                <button class="btn btn-primary"></button>
+            </div>
+
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <th>STT</th>
+                    <th>Name</th>
+                    <th>Avatar</th>
+                    <th>Link</th>
+                    <th>Options</th>
+                </thead>
+                <tbody>
+                    <% 
+                    arrSinger.forEach(singer =>{
+                    %> 
+                    <tr>
+                        <td><%=singer.id %> </td>
+                        <td><%=singer.name %> </td>
+                        <td>
+                            <img src="<%=domainImg+singer.avatar %>">
+                        </td>
+                        <td>
+                            <a href="<%=domain+singer.link%>" target="_blank"> <%=singer.name%></a>
+                            
+                        </td>
+                        <td>
+                            <button style="width:100%" class="btn btn-warning">Update</button>
+                            <br><br>
+                            <button  style="width:100%" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <% }) %> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

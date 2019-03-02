@@ -1,0 +1,4 @@
+- làm trang view update
+ - kt co ton tai id do kg
+ - field co san data trên form
+ - save (filter mảng và save)
